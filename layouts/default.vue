@@ -1,9 +1,31 @@
 <template>
-  <div class="container">
-    <Nuxt />
+  <div class="app">
+    <button @click="login">로그인</button>
+    <button @click="logout">로그아웃</button>
+    <div class="container">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { Action } from 'vuex-class';
+
+@Component({
+  components: {},
+})
+export default class App extends Vue {
+  /******************************************************************
+   * Store
+   * ****************************************************************/
+  @Action('login', { namespace: 'user' })
+  private login!: () => void;
+
+  @Action('logout', { namespace: 'user' })
+  private logout!: () => void;
+}
+</script>
 <style>
 html {
   font-family: 'NanumSquareRound', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
