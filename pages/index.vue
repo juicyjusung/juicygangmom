@@ -1,5 +1,5 @@
 <template>
-  <div class="grid">
+  <section class="grid">
     <div class="reviews__container">
       <h1 class="reviews__heading">
         리뷰<span class="heading__count">총{{ totalElements }}개</span>
@@ -11,7 +11,7 @@
         <a class="reviews__btn reviews__btn--gray">리뷰{{ totalElements }}개 전체보기</a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

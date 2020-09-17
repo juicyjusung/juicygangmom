@@ -1,36 +1,36 @@
 <template>
-  <div class="statistics">
+  <article class="statistics">
     <div class="statistics__item">
-      <div class="statistics__header">별점 평균</div>
+      <span class="statistics__header">별점 평균</span>
       <div class="statistics__body">
         <img class="statistics__chip--star" src="@/assets/icon/Star.png" />
-        <div class="statistics__value">
+        <span class="statistics__value">
           {{ statistics.starAvg.toFixed(1) }}
-        </div>
+        </span>
         <div class="statistics__unit">/5</div>
       </div>
     </div>
     <div class="statistics__item">
-      <div class="statistics__header">별점 비율</div>
+      <span class="statistics__header">별점 비율</span>
       <div class="statistics__body">
-        <div class="statistics__chip statistics__chip--yellow">
+        <span class="statistics__chip statistics__chip--yellow">
           {{ maximumStarRate.star }}점
-        </div>
-        <div class="statistics__value">{{ maximumStarRate.rate }}</div>
-        <div class="statistics__unit">%</div>
+        </span>
+        <span class="statistics__value">{{ maximumStarRate.rate }}</span>
+        <span class="statistics__unit">%</span>
       </div>
     </div>
     <div class="statistics__item">
-      <div class="statistics__header">추천 비율</div>
+      <span class="statistics__header">추천 비율</span>
       <div class="statistics__body">
-        <div class="statistics__chip statistics__chip--green">추천</div>
-        <div class="statistics__value">
+        <span class="statistics__chip statistics__chip--green">추천</span>
+        <span class="statistics__value">
           {{ statistics.recommendedRate }}
-        </div>
-        <div class="statistics__unit">%</div>
+        </span>
+        <span class="statistics__unit">%</span>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script lang="ts">

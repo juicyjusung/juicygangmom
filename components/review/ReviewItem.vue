@@ -3,64 +3,64 @@
     <!-- Review Card-->
     <div class="review__item" :class="isShow || 'review__item--blur'">
       <div class="review__header">
-        <div
+        <span
           class="review__recommend review__recommend--green"
           :class="review.recommended || 'review__recommend--red'"
         >
           {{ review.recommended ? '추천함' : '추천하지 않음' }}
-        </div>
-        <div class="review__date">
+        </span>
+        <span class="review__date">
           {{ parseDateString(review.createdAt) }}
-        </div>
+        </span>
       </div>
       <RatingStars class="review__rating" :rating-num="4"></RatingStars>
       <div class="review__body">
-        <div class="review__heading">
+        <span class="review__heading">
           {{ `"${review.title}"` }}
-        </div>
+        </span>
         <div class="review__content">
-          <div class="content__header content__header--pros">
+          <span class="content__header content__header--pros">
             <i class="icon-pros"></i>좋은점
-          </div>
-          <div class="content__body">
+          </span>
+          <span class="content__body">
             {{ review.pros }}
-          </div>
+          </span>
         </div>
         <div class="review__content">
-          <div class="content__header content__header--cons">
+          <span class="content__header content__header--cons">
             <i class="icon-cons"></i>아쉬운점
-          </div>
-          <div class="content__body">
+          </span>
+          <span class="content__body">
             {{ review.cons }}
-          </div>
+          </span>
         </div>
       </div>
       <div class="review__footer">
         <div class="hashtag">
-          <div class="hashtag__item">{{ review.startGrade }}</div>
-          <div class="hashtag__item">{{ review.courseTerm }}</div>
+          <span class="hashtag__item">{{ review.startGrade }}</span>
+          <span class="hashtag__item">{{ review.courseTerm }}</span>
         </div>
         <div class="writer">
-          <div class="writer__name">{{ review.writer }}</div>
+          <span class="writer__name">{{ review.writer }}</span>
           <img class="writer__avatar" src="@/assets/icon/profile.png" />
         </div>
         <div class="info">
-          <div
+          <span
             class="info__recommend info__recommend--green"
             :class="review.recommended || 'info__recommend--red'"
           >
             {{ review.recommended ? '추천함' : '추천하지 않음' }}
-          </div>
-          <div class="info__date">{{ parseDateString(review.createdAt) }}</div>
+          </span>
+          <span class="info__date">{{ parseDateString(review.createdAt) }}</span>
         </div>
       </div>
     </div>
     <!-- Required Auth-->
     <div v-if="!isShow" class="review__require-auth">
       <div class="require-auth">
-        <div class="require-auth__text">
+        <span class="require-auth__text">
           하나의 리뷰만 쓰셔도!<br />강남엄마의 모든 리뷰들을 확인하실 수 있습니다
-        </div>
+        </span>
         <a class="require-auth__btn require-auth__btn--red link"
           ><i class="icon-write"></i>리뷰쓰기</a
         >

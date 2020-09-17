@@ -1,5 +1,5 @@
 <template>
-  <div v-if="reviews" class="reviews__wrapper">
+  <article v-if="reviews" class="reviews__wrapper">
     <!--  for mobile-->
     <div v-if="isMobile" class="reviews__card">
       <Carousel class="review_carousel" :per-page="1">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script lang="ts">
