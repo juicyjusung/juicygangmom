@@ -1,3 +1,22 @@
+.fit {
+  width: 100% !important;
+  height: 100% !important;
+}
+.full-height {
+  height: 100% !important;
+}
+.full-width {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.link {
+  cursor: pointer;
+}
+.circle-chip {
+  border-radius: 100px;
+}
 .row, .column, .flex {
   display: flex;
   flex-wrap: wrap;
