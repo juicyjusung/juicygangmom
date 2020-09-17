@@ -24,7 +24,9 @@
       <div class="statistics__header">추천 비율</div>
       <div class="statistics__body">
         <div class="statistics__chip statistics__chip--green">추천</div>
-        <div class="statistics__value">70</div>
+        <div class="statistics__value">
+          {{ statistics && statistics.recommendedRate }}
+        </div>
         <div class="statistics__unit">%</div>
       </div>
     </div>
