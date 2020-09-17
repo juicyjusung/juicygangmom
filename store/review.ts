@@ -13,11 +13,6 @@ import { getApi } from '~/utils/common';
 export default class ReviewModule extends VuexModule {
   reviews: Review[] = [];
 
-  @Mutation
-  setUsers(reviews: Review[]) {
-    this.reviews = reviews;
-  }
-
   @Action
   async getReviews(academyId: number) {
     try {
