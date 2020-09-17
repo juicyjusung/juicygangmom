@@ -19,6 +19,12 @@ juicygangmom([Live Demo](http://ec2-15-164-98-92.ap-northeast-2.compute.amazonaw
 
 ![image](https://user-images.githubusercontent.com/46892438/93492991-64a84e00-f946-11ea-9099-0ef6609e8346.png)
 
+---
+## env(.env) 
+
+```
+BASE_URL=https://AAAAAAAAAA.BBBB.CCCC
+```
 
 ---
 
