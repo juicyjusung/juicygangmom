@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Prop, Vue, Component } from 'vue-property-decorator';
+import { Prop, Vue, Component } from 'nuxt-property-decorator';
 
 @Component({
   components: {},

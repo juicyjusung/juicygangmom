@@ -15,8 +15,7 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator';
-import { Action } from 'vuex-class';
+import { Component } from 'nuxt-property-decorator';
 import Statistic from '~/components/review/Statistic.vue';
 import ReviewList from '~/components/review/ReviewList.vue';
 import PageBase from '~/pages/PageBase';
@@ -24,16 +23,19 @@ import { Review } from '~/types/Review';
 
 @Component({
   components: { ReviewList, Statistic },
+  async asyncData({ store }) {
+    const [reviewsData, statisticsData] = await Promise.all([
+      store.dispatch('review/getReviews', 1),
+      store.dispatch('review/getStatistics', 1),
+    ]);
+    return {
+      totalElements: reviewsData.totalElements,
+      reviews: reviewsData.content,
+      statistics: statisticsData,
+    };
+  },
 })
 export default class Index extends PageBase {
-  /******************************************************************
-   * Store
-   * ****************************************************************/
-  @Action('getReviews', { namespace: 'review' })
-  private getReviews!: (academyId: number) => any;
-
-  @Action('getStatistics', { namespace: 'review' })
-  private getStatistics!: (academyId: number) => Statistic;
   /******************************************************************
    * Props & Emit
    * ****************************************************************/
@@ -49,22 +51,11 @@ export default class Index extends PageBase {
    * Life Cycles
    * ****************************************************************/
 
-  private async created() {
-    await this.fetchData();
-  }
+  private async created() {}
 
   /******************************************************************
    * Methods
    * ****************************************************************/
-  private async fetchData() {
-    const [reviewsData, statisticsData] = await Promise.all([
-      this.getReviews(1),
-      this.getStatistics(1),
-    ]);
-    this.totalElements = reviewsData.totalElements;
-    this.reviews = reviewsData.content as Review[];
-    this.statistics = statisticsData;
-  }
 }
 </script>
 

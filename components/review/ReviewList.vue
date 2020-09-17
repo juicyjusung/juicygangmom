@@ -1,5 +1,5 @@
 <template>
-  <div class="reviews__wrapper">
+  <div v-if="reviews" class="reviews__wrapper">
     <!--  for mobile-->
     <div v-if="isMobile" class="reviews__card">
       <Carousel class="review_carousel" :per-page="1">
@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop } from 'vue-property-decorator';
+import { Component, Prop } from 'nuxt-property-decorator';
 // @ts-ignore
 import { Carousel, Slide } from 'vue-carousel';
 import { State } from 'vuex-class';

@@ -70,7 +70,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'nuxt-property-decorator';
 import RatingStars from '~/components/review/RatingStars.vue';
 import { Review } from '~/types/Review';
 

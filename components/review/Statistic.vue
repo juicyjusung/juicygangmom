@@ -5,7 +5,7 @@
       <div class="statistics__body">
         <img class="statistics__chip--star" src="@/assets/icon/Star.png" />
         <div class="statistics__value">
-          {{ statistics && statistics.starAvg.toFixed(1) }}
+          {{ statistics.starAvg.toFixed(1) }}
         </div>
         <div class="statistics__unit">/5</div>
       </div>
@@ -25,7 +25,7 @@
       <div class="statistics__body">
         <div class="statistics__chip statistics__chip--green">추천</div>
         <div class="statistics__value">
-          {{ statistics && statistics.recommendedRate }}
+          {{ statistics.recommendedRate }}
         </div>
         <div class="statistics__unit">%</div>
       </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'nuxt-property-decorator';
 import { Statistics } from '~/types/Statistics';
 
 @Component({
