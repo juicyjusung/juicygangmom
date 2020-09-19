@@ -13,7 +13,7 @@
           {{ parseDateString(review.createdAt) }}
         </span>
       </div>
-      <RatingStars class="review__rating" :rating-num="4"></RatingStars>
+      <RatingStars class="review__rating" :rating-num="review.rating"></RatingStars>
       <div class="review__body">
         <span class="review__heading">
           {{ `"${review.title}"` }}
