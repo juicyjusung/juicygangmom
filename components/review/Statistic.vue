@@ -59,8 +59,12 @@ export default class Statistic extends Vue {
    * Methods
    * ****************************************************************/
   getMaximumValueObject(starRates: any) {
-    const sorted = Object.entries(starRates).sort((a: any, z: any) => z[1] - a[1]);
-    return { star: sorted[0][0], rate: sorted[0][1] };
+    const arr = Object.values(starRates) as [number];
+    const totalRates = arr.reduce((acc: number, cur: number) => acc + cur, 0);
+    const sorted = Object.entries(starRates).sort((a: any, z: any) => z[1] - a[1]) as [
+      [string, number]
+    ];
+    return { star: sorted[0][0], rate: ((sorted[0][1] / totalRates) * 100).toFixed(1) };
   }
 }
 </script>
