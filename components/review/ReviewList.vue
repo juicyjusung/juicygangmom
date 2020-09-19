@@ -3,7 +3,7 @@
     <!--  for mobile-->
     <div v-if="isMobile" class="reviews__card">
       <Carousel class="review_carousel" :per-page="1">
-        <slide v-for="(item, index) in reviews" :key="index">
+        <slide v-for="(item, index) in reviews" :key="item.id">
           <ReviewItem :review="item" :is-show="isLoggedin || index === 0"></ReviewItem>
         </slide>
       </Carousel>
@@ -14,7 +14,7 @@
       <!-- for loggined user-->
       <div v-if="isLoggedin">
         <div class="reviews__card">
-          <div v-for="(item, index) in reviews" :key="index + 'pc'" class="reviews__item">
+          <div v-for="item in reviews" :key="item.id">
             <ReviewItem
               :review="item"
               :is-show="isLoggedin"
@@ -31,10 +31,7 @@
           class="reviews__card"
         ></ReviewItem>
         <div class="reviews__card">
-          <div
-            v-for="(item, index) in reviews.slice(1, reviews.length)"
-            :key="index + 'pc'"
-          >
+          <div v-for="item in reviews.slice(1, reviews.length)" :key="item.id">
             <ReviewItem
               :review="item"
               :is-show="isLoggedin"
@@ -54,7 +51,7 @@ import { Carousel, Slide } from 'vue-carousel';
 import { State } from 'vuex-class';
 import PageBase from '~/pages/PageBase';
 import { Review } from '~/types/Review';
-import ReviewItem from '~/components/review/ReviewItem.vue';
+import ReviewItem from '~/components/review/molecules/ReviewItem.vue';
 
 @Component({
   components: {
