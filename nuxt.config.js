@@ -29,13 +29,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '~/assets/styles/global.scss',
-    '~/assets/styles/_variables.scss',
-    '~/assets/styles/_mixin.scss',
-    '~/assets/fonts/NanumSquare.css',
-    '~/assets/fonticon/fontello.css',
-  ],
+  css: ['~/assets/fonts/NanumSquare.css', '~/assets/fonticon/fontello.css'],
+  styleResources: {
+    scss: [
+      '~/assets/styles/_variables.scss',
+      '~/assets/styles/_mixin.scss',
+      '~/assets/styles/global.scss',
+    ],
+  },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins

@@ -16,8 +16,8 @@
 
 <script lang="ts">
 import { Component } from 'nuxt-property-decorator';
-import Statistic from '~/components/review/Statistic.vue';
-import ReviewList from '~/components/review/ReviewList.vue';
+import Statistic from '~/components/statistics/Statistic.vue';
+import ReviewList from '~/components/review/organisms/ReviewList.vue';
 import PageBase from '~/pages/PageBase';
 import { Review } from '~/types/Review';
 
@@ -61,7 +61,6 @@ export default class Index extends PageBase {
 
 <style lang="scss">
 @import '@/assets/styles/mixin';
-
 .grid {
   margin: 0 auto;
   width: 100%;

@@ -9,4 +9,6 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class Scafold extends Vue {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/styles/mixin';
+</style>
