@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator';
-import ChipStar from '~/components/statistics/atoms/StarChip.vue';
-import Value from '~/components/statistics/atoms/Value.vue';
-import Unit from '~/components/statistics/atoms/Unit.vue';
-import ChipValue from '~/components/statistics/atoms/ValueChip.vue';
-import StarChip from '~/components/statistics/atoms/StarChip.vue';
-import ValueChip from '~/components/statistics/atoms/ValueChip.vue';
+import ChipStar from '~/components/review/statistics/atoms/StarChip.vue';
+import Value from '~/components/review/statistics/atoms/Value.vue';
+import Unit from '~/components/review/statistics/atoms/Unit.vue';
+import ChipValue from '~/components/review/statistics/atoms/ValueChip.vue';
+import StarChip from '~/components/review/statistics/atoms/StarChip.vue';
+import ValueChip from '~/components/review/statistics/atoms/ValueChip.vue';
 
 @Component({
   components: { ValueChip, StarChip, ChipValue, Unit, Value, ChipStar },

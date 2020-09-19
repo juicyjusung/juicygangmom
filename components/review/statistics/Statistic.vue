@@ -28,13 +28,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator';
 import { Statistics } from '~/types/Statistics';
-import Title from '~/components/statistics/atoms/Title.vue';
-import ChipStar from '~/components/statistics/atoms/StarChip.vue';
-import Value from '~/components/statistics/atoms/Value.vue';
-import Unit from '~/components/statistics/atoms/Unit.vue';
-import ChipValue from '~/components/statistics/atoms/ValueChip.vue';
-import StatisticCardBody from '~/components/statistics/molecules/StatisticCardBody.vue';
-import StatisticCard from '~/components/statistics/organisms/StatisticCard.vue';
+import Title from '~/components/review/statistics/atoms/Title.vue';
+import ChipStar from '~/components/review/statistics/atoms/StarChip.vue';
+import Value from '~/components/review/statistics/atoms/Value.vue';
+import Unit from '~/components/review/statistics/atoms/Unit.vue';
+import ChipValue from '~/components/review/statistics/atoms/ValueChip.vue';
+import StatisticCardBody from '~/components/review/statistics/molecules/StatisticCardBody.vue';
+import StatisticCard from '~/components/review/statistics/organisms/StatisticCard.vue';
 
 @Component({
   components: {

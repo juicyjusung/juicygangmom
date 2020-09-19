@@ -51,7 +51,7 @@ import { Carousel, Slide } from 'vue-carousel';
 import { State } from 'vuex-class';
 import PageBase from '~/pages/PageBase';
 import { Review } from '~/types/Review';
-import ReviewItem from '~/components/review/molecules/ReviewItem.vue';
+import ReviewItem from '~/components/review/reviews/organisms/ReviewItem.vue';
 
 @Component({
   components: {

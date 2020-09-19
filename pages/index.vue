@@ -5,7 +5,7 @@
         리뷰<span class="heading__count">총{{ totalElements }}개</span>
       </h1>
       <Statistic :statistics="statistics"></Statistic>
-      <ReviewList :reviews="reviews"></ReviewList>
+      <Reviews :reviews="reviews"></Reviews>
       <div class="reviews__btn-wrapper">
         <a class="reviews__btn reviews__btn--red"><i class="icon-write" />리뷰쓰기</a>
         <a class="reviews__btn reviews__btn--gray">리뷰{{ totalElements }}개 전체보기</a>
@@ -16,13 +16,13 @@
 
 <script lang="ts">
 import { Component } from 'nuxt-property-decorator';
-import Statistic from '~/components/statistics/Statistic.vue';
-import ReviewList from '~/components/review/organisms/ReviewList.vue';
+import Statistic from '~/components/review/statistics/Statistic.vue';
+import Reviews from '~/components/review/reviews/Reviews.vue';
 import PageBase from '~/pages/PageBase';
 import { Review } from '~/types/Review';
 
 @Component({
-  components: { ReviewList, Statistic },
+  components: { Reviews, Statistic },
   async asyncData({ store }) {
     const [reviewsData, statisticsData] = await Promise.all([
       store.dispatch('review/getReviews', 1),

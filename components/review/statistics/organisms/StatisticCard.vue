@@ -13,8 +13,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator';
-import Title from '~/components/statistics/atoms/Title.vue';
-import StatisticCardBody from '~/components/statistics/molecules/StatisticCardBody.vue';
+import Title from '~/components/review/statistics/atoms/Title.vue';
+import StatisticCardBody from '~/components/review/statistics/molecules/StatisticCardBody.vue';
 
 @Component({
   components: { StatisticCardBody, Title },

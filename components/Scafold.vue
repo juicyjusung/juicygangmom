@@ -1,12 +1,14 @@
 <template></template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Prop, Vue } from 'nuxt-property-decorator';
 
 @Component({
   components: {},
 })
-export default class Scafold extends Vue {}
+export default class Scafold extends Vue {
+  @Prop({ type: String, default: '' }) value!: string;
+}
 </script>
 
 <style lang="scss" scoped>
