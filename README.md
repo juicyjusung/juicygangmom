@@ -10,6 +10,7 @@ juicygangmom([Live Demo](http://ec2-15-164-98-92.ap-northeast-2.compute.amazonaw
 - UI 프레임웤 없이 진행
 - Responsive web
 - BEM 방법론 지키려 최대한 노력
+- Atomic Design 적용
 - Docker build 및 EC2 DEMO 배포
 
 ### 기능
