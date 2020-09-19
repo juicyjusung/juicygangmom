@@ -69,23 +69,22 @@ export default class Statistic extends Vue {
 @import '@/assets/styles/mixin';
 
 .statistics {
-  width: 100%;
-  border-radius: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   background: #e5e6ec;
+  border-radius: 20px;
   @include desktop {
-    border-radius: 20px;
     background: none;
   }
 }
 .statistics__item {
-  padding: 16px 0;
   display: flex;
+  flex: 1 1 33.33%;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 1 1 33.33%;
+  padding: 16px 0;
   @include desktop {
     background-color: #e5e6ec;
     border-radius: 20px;
@@ -95,22 +94,22 @@ export default class Statistic extends Vue {
   }
 }
 .statistics__header {
-  font-weight: 800;
-  font-size: 12px;
-  line-height: 150%;
-  text-align: center;
   color: #444951;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 150%;
   @include desktop {
     font-size: 16px;
   }
 }
 .statistics__body {
-  flex: 1 0 61px;
-  margin: 16px 0;
   display: flex;
+  flex: 1 0 61px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 16px 0;
   &:not(:first-child) {
     border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
@@ -120,30 +119,30 @@ export default class Statistic extends Vue {
 }
 
 .statistics__chip {
-  margin: 0 4px;
-  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 4px;
+  border-radius: 100px;
   color: #ffffff;
-  font-weight: 800;
   font-size: 12px;
+  font-weight: 800;
   line-height: 150%;
   @include desktop {
     width: 42px;
     height: 42px;
-    font-size: 16px;
     margin: 0 8px;
+    font-size: 16px;
   }
   &--star {
-    margin-top: -8px;
-    height: 32px;
     width: 32px;
+    height: 32px;
+    margin-top: -8px;
     @include desktop {
-      height: 40px;
       width: 40px;
+      height: 40px;
     }
   }
   &--yellow {
@@ -155,20 +154,20 @@ export default class Statistic extends Vue {
 }
 .statistics__value {
   margin: 0 4px;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 150%;
   color: #444951;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 150%;
   @include desktop {
     font-size: 40px;
   }
 }
 .statistics__unit {
   margin: 0 4px;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 150%;
   color: #a0a5ae;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 150%;
   @include desktop {
     font-size: 24px;
   }

@@ -31,8 +31,8 @@ export default class RatingStars extends Vue {
 .rating {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: start;
 }
 .rating__stars {
   font-size: 20px;
@@ -41,11 +41,11 @@ export default class RatingStars extends Vue {
   }
 }
 .rating__score {
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 150%;
-  color: #444951;
   margin-left: 4px;
+  color: #444951;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 150%;
   @include desktop {
     font-size: 20px;
   }

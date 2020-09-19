@@ -21,7 +21,7 @@ export default class ReviewModule extends VuexModule {
       if (res?.data) {
         return camelcaseKeys(res.data, { deep: true });
       }
-      // code, message => error handling
+      // code, message => reponse handling
     } catch (e) {
       console.error(e);
     }
@@ -35,7 +35,7 @@ export default class ReviewModule extends VuexModule {
       if (res?.data) {
         return camelcaseKeys(res.data, { deep: true });
       }
-      // code, message => error handling
+      // code, message => reponse handling
     } catch (e) {
       console.error(e);
     }
