@@ -1,15 +1,17 @@
 <template>
   <div class="m-reviews__btn-wrapper">
     <Button
+      value="리뷰쓰기"
       color="red"
       prefix-icon="icon-write"
-      value="리뷰쓰기"
       class="m-reviews__btn"
+      padding="23px"
     />
     <Button
-      color="gray"
       :value="`리뷰 ${totalElements}개 전체보기`"
+      color="gray"
       class="m-reviews__btn"
+      padding="23px"
     ></Button>
   </div>
 </template>
@@ -34,23 +36,13 @@ export default class ReviewsFooter extends Vue {
 }
 
 .m-reviews__btn {
-  cursor: pointer;
   font-weight: 800;
   font-size: 12px;
-  padding: 23px 0;
-  text-align: center;
   border-radius: 20px;
   margin: 5px 0;
   @include desktop {
     font-size: 16px;
-  }
-  &--red {
-    color: #ffffff;
-    background: #ff583f;
-  }
-  &--gray {
-    color: #727884;
-    background: #e5e6ec;
+    line-height: 24px;
   }
 }
 </style>

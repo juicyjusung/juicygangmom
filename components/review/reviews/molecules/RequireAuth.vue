@@ -2,10 +2,11 @@
   <div class="m-require-auth">
     <AuthText :auth-text-value="authTextValue" />
     <Button
-      value="리뷰쓰기!"
+      value="리뷰쓰기"
       prefix-icon="icon-write"
       color="red"
       class="m-require-auth__btn"
+      padding="23px"
     />
   </div>
 </template>
@@ -33,7 +34,10 @@ export default class RequireAuth extends Vue {
   align-items: center;
 }
 .m-require-auth__btn {
-  width: 145px;
   margin-top: 40px;
+  width: 146px;
+  @include desktop {
+    width: 318px;
+  }
 }
 </style>
