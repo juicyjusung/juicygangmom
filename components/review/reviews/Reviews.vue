@@ -14,13 +14,13 @@
       <!-- for loggined user-->
       <div v-if="isLoggedin">
         <div class="reviews__card">
-          <div v-for="item in reviews" :key="item.id">
-            <ReviewItem
-              :review="item"
-              :is-show="isLoggedin"
-              class="reviews__item"
-            ></ReviewItem>
-          </div>
+          <ReviewItem
+            v-for="item in reviews"
+            :key="item.id"
+            :review="item"
+            :is-show="isLoggedin"
+            class="reviews__item"
+          ></ReviewItem>
         </div>
       </div>
       <!-- for not loggined user-->
@@ -31,13 +31,13 @@
           class="reviews__card"
         ></ReviewItem>
         <div class="reviews__card">
-          <div v-for="item in reviews.slice(1, reviews.length)" :key="item.id">
-            <ReviewItem
-              :review="item"
-              :is-show="isLoggedin"
-              class="reviews__item"
-            ></ReviewItem>
-          </div>
+          <ReviewItem
+            v-for="item in reviews.slice(1, reviews.length)"
+            :key="item.id"
+            :review="item"
+            :is-show="isLoggedin"
+            class="reviews__item"
+          ></ReviewItem>
         </div>
       </div>
     </div>

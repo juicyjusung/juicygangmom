@@ -92,7 +92,6 @@ export default class ReviewItem extends Vue {
 <style lang="scss" scoped>
 @import '@/assets/styles/mixin';
 
-$review-padding: 20px;
 .o-review__container {
   display: flex;
   flex-direction: column;
@@ -101,7 +100,8 @@ $review-padding: 20px;
 }
 .o-review__item {
   width: 100%;
-  padding: $review-padding;
+  padding: 20px;
+
   &--blur {
     filter: blur(10px);
   }
