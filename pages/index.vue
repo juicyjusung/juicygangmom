@@ -19,7 +19,7 @@ import { Component } from 'nuxt-property-decorator';
 import Statistic from '~/components/review/statistics/Statistic.vue';
 import Reviews from '~/components/review/reviews/Reviews.vue';
 import PageBase from '~/pages/PageBase';
-import { Review } from '~/types/Review';
+import { ReviewModel } from '~/types/Review';
 
 @Component({
   components: { Reviews, Statistic },
@@ -29,8 +29,8 @@ import { Review } from '~/types/Review';
       store.dispatch('review/getStatistics', 1),
     ]);
     return {
-      totalElements: reviewsData.totalElements,
-      reviews: reviewsData.content,
+      totalElements: reviewsData.reviewsMeta.totalElements,
+      reviews: reviewsData.reviews,
       statistics: statisticsData,
     };
   },
@@ -43,7 +43,7 @@ export default class Index extends PageBase {
   /******************************************************************
    * Variable
    * ****************************************************************/
-  private reviews: Review[] = [];
+  private reviews: ReviewModel[] = [];
   private totalElements: number = 0;
   private statistics: Statistic | null = null;
 

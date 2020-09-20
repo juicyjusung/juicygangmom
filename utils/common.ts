@@ -1,3 +1,4 @@
+import camelcaseKeys from 'camelcase-keys';
 import { API } from '~/utils/ApiUrl';
 
 export const svgToBase64 = (svg: Node) => {
@@ -15,4 +16,14 @@ export const getApi = (api: API, obj: object) => {
     parsed = parsed.replace(regex, entry[1]);
   });
   return parsed as string;
+};
+
+export const initModel = (target: any, data: any) => {
+  if (!data || !target) return;
+  for (const k in data) {
+    const key = k as string;
+    if (Object.prototype.hasOwnProperty.call(target, key)) {
+      target[key] = data[key];
+    }
+  }
 };

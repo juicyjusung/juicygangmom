@@ -1,3 +1,5 @@
+import { initModel } from '~/utils/common';
+
 export interface Review {
   id: number;
   title: string;
@@ -17,21 +19,33 @@ export interface Review {
   recommended: boolean;
 }
 
-// export interface Review {
-//   id: number;
-//   title: string;
-//   academy_id: number;
-//   academy_name: string;
-//   academy_logo: string;
-//   start_grade: string;
-//   subject: string;
-//   course_term: string;
-//   created_at: string;
-//   class_name: string;
-//   teacher_name: string;
-//   pros: string;
-//   cons: string;
-//   rating: number;
-//   writer: string;
-//   recommended: boolean;
-// }
+export class ReviewModel implements Review {
+  id = 0;
+  title = '';
+  academyId = 0;
+  academyName = '';
+  academyLogo = '';
+  startGrade = '';
+  subject = '';
+  courseTerm = '';
+  createdAt = '';
+  className = '';
+  teacherName = '';
+  pros = '';
+  cons = '';
+  rating = 0;
+  writer = '';
+  recommended = false;
+
+  constructor(data: Review | null) {
+    if (data) {
+      initModel(this, data);
+    }
+  }
+}
+
+export interface ReviewMeta {
+  numberOfElements: number;
+  totalElements: number;
+  totalPages: number;
+}
